@@ -14,13 +14,13 @@ int main(){
 	printf("[1] Gerenciar Produtos\n");
  	printf("[2] Gerenciar Fornecedores\n");
  	printf("[3] Finalizar\n"); 
- 	printf("Escolha uma opÁ„o:");
+ 	printf("Escolha uma op√ß√£o:");
 		scanf("%d", &opcao);
 
- // ValidaÁ„o para escolhas do menu
+ // Valida√ß√£o para escolhas do menu
  if (opcao < 1 || opcao > 3) {
- 	printf("OpÁ„o inv·lida! Tente novamente.\n");
- 	continue; // Voltar para o inÌcio do loop
+ 	printf("Op√ß√£o inv√°lida! Tente novamente.\n");
+ 	continue; // Voltar para o in√≠cio do loop
 
  }
  
