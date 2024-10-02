@@ -29,13 +29,13 @@ int main(){
 	printf("\n[1] Gerenciar Produtos\n");
  	printf("[2] Gerenciar Fornecedores\n");
  	printf("[3] Finalizar\n"); 
- 	printf("Escolha uma opÁ„o:");
+ 	printf("Escolha uma op√ß√£o:");
 		scanf("%d", &opcao);
 
- // ValidaÁ„o para escolhas do menu
+ // Valida√ß√£o para escolhas do menu
  if (opcao < 1 || opcao > 3) {
- 	printf("OpÁ„o inv·lida! Tente novamente.\n");
- 	continue; // Voltar para o inÌcio do loop
+ 	printf("Op√ß√£o inv√°lida! Tente novamente.\n");
+ 	continue; // Voltar para o in√≠cio do loop
 
  }
  
@@ -45,18 +45,18 @@ int main(){
  	printf("\n[1] Cadastrar Produtos\n");
  	printf("[2] Listar Produtos\n");
  	printf("[3] Voltar ao menu\n");
- 	printf("Escolha uma opÁ„o:");
+ 	printf("Escolha uma op√ß√£o:");
  		scanf("%d",&opcao2);
 	 
 
  if (opcao2 == 1){		
  	if (contProdutos < LIMITE_PRODUTOS) {
-    	printf("\nDigite o cÛdigo do produto: ");
-    	scanf("%d", &codProdutos[contProdutos]); // LÍ o cÛdigo
+    	printf("\nDigite o c√≥digo do produto: ");
+    	scanf("%d", &codProdutos[contProdutos]); // L√™ o c√≥digo
         printf("Digite o nome do produto: ");
-        scanf(" %[^\n]", nomesProdutos[contProdutos]); // LÍ o nome
-        printf("Digite o preÁo do produto: ");
-        scanf("%f", &precosProdutos[contProdutos]); // LÍ o preÁo
+        scanf(" %[^\n]", nomesProdutos[contProdutos]); // L√™ o nome
+        printf("Digite o pre√ßo do produto: ");
+        scanf("%f", &precosProdutos[contProdutos]); // L√™ o pre√ßo
         contProdutos++;
     }
  	else{
@@ -67,7 +67,7 @@ int main(){
  else if (opcao2 == 2){
  	printf("\nProdutos Cadastrados\n");
  		for(int i=0; i < contProdutos; i++){
- 			printf("CÛdigo: %d, Produto: %s, PreÁo: %.2f\n", codProdutos[i], nomesProdutos[i], precosProdutos[i]);
+ 			printf("C√≥digo: %d, Produto: %s, Pre√ßo: %.2f\n", codProdutos[i], nomesProdutos[i], precosProdutos[i]);
 		 }
  }
  
@@ -75,7 +75,7 @@ int main(){
  	break;
   }
   else{
-  	printf("OpÁ„o inv·lida! Tente novamente.\n");
+  	printf("Op√ß√£o inv√°lida! Tente novamente.\n");
   }
  }
 }
@@ -86,7 +86,7 @@ int main(){
  	printf("\n[1] Cadastrar Fornecedor\n");
  	printf("[2] Listar Fornecedores\n");
  	printf("[3] Voltar ao menu\n");
- 	printf("Escolha uma opÁ„o:");
+ 	printf("Escolha uma op√ß√£o:");
 	scanf("%d",&opcao3);
  
  
@@ -118,7 +118,7 @@ int main(){
  	break;
   }
   else {
-    printf("OpÁ„o inv·lida! Tente novamente.\n");
+    printf("Op√ß√£o inv√°lida! Tente novamente.\n");
   }
  }
 }
