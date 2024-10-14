@@ -12,11 +12,11 @@ int main(){
 
  printf("Bem Vindo ao Main Hortifrut\n");
 
- printf("Dê uma olhada em nossas frutas e hortalicias!\n\n");
+ printf("DÃª uma olhada em nossas frutas e hortalicias!\n\n");
 
  
 
- // Preços das frutas
+ // PreÃ§os das frutas
 
  const float preco_banana = 5.0;
  
@@ -35,7 +35,7 @@ int main(){
 
  printf("[3] Mostrar carrinho\n");
 
- printf("Escolha uma opção:");
+ printf("Escolha uma opÃ§Ã£o:");
 
  scanf("%d", &opcao);
 
@@ -43,9 +43,9 @@ int main(){
 
  if (opcao < 1 || opcao > 3) {
 
- printf("Opção inválida! Tente novamente.\n");
+ printf("OpÃ§Ã£o invÃ¡lida! Tente novamente.\n");
 
- continue; // Voltar para o início do loop
+ continue; // Voltar para o inÃ­cio do loop
 
  }
 
@@ -59,9 +59,9 @@ int main(){
 
  printf("[1] Banana: ");
 
- printf("[2] Maça: ");
+ printf("[2] MaÃ§a: ");
 
- printf("[3] Melão ");
+ printf("[3] MelÃ£o ");
  
  printf("[4] Caqui ");
  
@@ -86,7 +86,7 @@ int main(){
 
  printf("Digite a quantidade de ");
 
- printf("Maça: ");
+ printf("MaÃ§a: ");
 
  scanf("%d", &quantidade);
 
@@ -98,7 +98,7 @@ int main(){
 
  printf("Digite a quantidade de ");
 
- printf("Melão: ");
+ printf("MelÃ£o: ");
 
  scanf("%d", &quantidade);
 
@@ -138,11 +138,11 @@ continue;
 
  printf("Bananas: %d (R$ %.2f)\n", quantidade_banana, quantidade_banana * preco_banana);
 
- printf("Maçãs: %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
+ printf("MaÃ§Ã£s: %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
 
- printf("Melões: %d (R$ %.2f)\n", quantidade_melao, quantidade_melao * preco_melao);
+ printf("MelÃµes: %d (R$ %.2f)\n", quantidade_melao, quantidade_melao * preco_melao);
  
- printf("Melões: %d (R$ %.2f)\n", quantidade_caqui, quantidade_melao * preco_caqui);
+ printf("MelÃµes: %d (R$ %.2f)\n", quantidade_caqui, quantidade_melao * preco_caqui);
 
  printf("Valor total: R$ %.2f\n", valor_total);
 
@@ -164,7 +164,7 @@ continue;
 
  printf("[3] Sair\n");
 
- printf("Escolha uma opção: ");
+ printf("Escolha uma opÃ§Ã£o: ");
 
  scanf("%d",&opcao2);
 
@@ -184,9 +184,9 @@ continue;
 
  printf("[1] Banana = %d \n",quantidade_banana);
 
- printf("[2] Maçã = %d\n",quantidade_maca);
+ printf("[2] MaÃ§Ã£ = %d\n",quantidade_maca);
 
- printf("[3] Melão = %d\n",quantidade_melao);
+ printf("[3] MelÃ£o = %d\n",quantidade_melao);
 
  printf("[4] Sair\n");
 
@@ -214,13 +214,13 @@ continue;
 
  if (quantidade_retira > quantidade_banana) {
 
- printf("\nQuantidade Inválida\n");
+ printf("\nQuantidade InvÃ¡lida\n");
 
  }
 
  else {
 
- printf("Agora você tem: %d Bananas",quantidade_banana-quantidade_retira);
+ printf("Agora vocÃª tem: %d Bananas",quantidade_banana-quantidade_retira);
 
  quantidade_banana -= quantidade_retira;
 
@@ -230,7 +230,7 @@ continue;
 
  else if (opcao3 == 2) {
 
- printf("Maçãs: ");
+ printf("MaÃ§Ã£s: ");
 
  scanf("%d", &quantidade_retira);
 
@@ -244,7 +244,7 @@ continue;
 
  else{
 
- printf("Agora você tem: %d Maças\n",quantidade_maca-quantidade_retira);
+ printf("Agora vocÃª tem: %d MaÃ§as\n",quantidade_maca-quantidade_retira);
 
  quantidade_maca -= quantidade_retira;
 
@@ -254,7 +254,7 @@ continue;
 
  else if (opcao3 == 3) {
 
- printf("Melões: ");
+ printf("MelÃµes: ");
 
  scanf("%d", &quantidade_retira);
 
@@ -268,7 +268,7 @@ continue;
 
  else{
 
- printf("Agora você tem: %d Maças\n",quantidade_melao-quantidade_retira);
+ printf("Agora vocÃª tem: %d MaÃ§as\n",quantidade_melao-quantidade_retira);
 
  quantidade_melao -= quantidade_retira;
 
@@ -280,7 +280,7 @@ continue;
 
  
 
- // Seleção da forma de pagemento.
+ // SeleÃ§Ã£o da forma de pagemento.
 
  printf("\nEscolha a forma de pagamento:\n");
 
@@ -288,7 +288,7 @@ continue;
 
  printf("[1] Pix\n[2] Debito \n[3] Credito ");
 
- printf("\nEscolha uma opção: ");
+ printf("\nEscolha uma opÃ§Ã£o: ");
 
  scanf("%d",&escolha);
 
