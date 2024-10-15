@@ -13,10 +13,11 @@ int main() {
     const float preco_maca = 10.0;
     const float preco_melao = 10.0;
 
-    printf("Bem Vindo ao Main Hortifrut\n");
+    printf("        Bem Vindo ao Main Hortifrut\n");
     printf("Dê uma olhada em nossas frutas e hortalícias!\n\n");
 
     while (1) {
+    	printf("----- Menu -----");
         printf("\n[1] Catálogo de produtos\n");
         printf("[2] Mostrar carrinho\n");
         printf("[3] Mostrar resumo\n");
@@ -31,15 +32,29 @@ int main() {
 
         // Catálogo de Produtos
         if (opcao == 1) {
-            printf("\n[1] Banana\n[2] Maçã\n[3] Melão\n[4] Caqui\n");
-            printf("Escolha uma fruta: ");
+        	while(1){
+        	printf("\n ----- Catálogo de Produtos -----");
+            printf("\n[1] Banana");
+            printf("\n[2] Maçã");
+            printf("\n[3] Melão");
+            printf("\n[4] Caqui");
+            printf("\n[5] Menu");
+            printf("\nEscolha uma fruta: ");
             scanf("%d", &opcao3);
-
+            
+            if (opcao3 < 1 || opcao3 > 5) {
+            printf("Opção inválida! Tente novamente.\n");
+            continue;
+        	}
+        	
+        	if(opcao3 == 5){
+        		break;
+			}
             printf("Digite a quantidade: ");
             scanf("%d", &quantidade);
 
             // Validação de quantidade
-            if (quantidade <= 0) {
+           	if (quantidade <= 0) {
                 printf("Quantidade inválida!\n");
                 continue;
             }
@@ -61,11 +76,12 @@ int main() {
                     printf("Opção de fruta inválida!\n");
             }
         }
+	}
 
         // Mostrar Carrinho
         else if (opcao == 2) {
             while (1) {
-                printf("\nCarrinho:\n");
+                printf("\n----- Carrinho -----\n");
                 printf("Bananas: %d\n", quantidade_banana);
                 printf("Maçãs: %d\n", quantidade_maca);
                 printf("Melões: %d\n", quantidade_melao);
@@ -142,7 +158,7 @@ int main() {
 
         // Fechamento do pedido
         else if (opcao == 3) {
-            printf("\nResumo das escolhas:\n");
+            printf("\n----- Resumo das escolhas -----\n");
             printf("Bananas: %d (R$ %.2f)\n", quantidade_banana, quantidade_banana * preco_banana);
             printf("Maçãs: %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
             printf("Melões: %d (R$ %.2f)\n", quantidade_melao, quantidade_melao * preco_melao);
@@ -157,6 +173,7 @@ int main() {
         
           // Seleção da forma de pagamento.
         else if(opcao = 4){
+        	printf("\n----- Pagamento ------");
     		printf("\nEscolha a forma de pagamento:\n");
     		printf("[1] Pix\n[2] Débito\n[3] Crédito\n");
    			printf("Escolha uma opção: ");
