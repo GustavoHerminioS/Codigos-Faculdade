@@ -1,321 +1,181 @@
 #include <stdio.h>
-
 #include <locale.h>
 
-int main(){
-
- setlocale(LC_ALL,"Portuguese");
-
- int pix=1,debito=2,credito=3,escolha=0,opcao=0,opcao2=0,opcao3=0,retirar=0,quantidade_retira=0,quantidade,quantidade_banana = 0, quantidade_maca = 0, quantidade_melao = 0, quantidade_caqui;
- 
- float valor_total = 0.0;
-
- printf("Bem Vindo ao Main Hortifrut\n");
-
- printf("Dê uma olhada em nossas frutas e hortalicias!\n\n");
-
- 
-
- // Preços das frutas
-
- const float preco_banana = 5.0;
- 
- const float preco_caqui = 5.0;
-
- const float preco_maca = 10.0;
-
- const float preco_melao = 10.0;
-
- while (1) {
-
-
- printf("[1] Catalogo de produtos \n");
-
- printf("[2] Sair e mostrar resumo\n");
-
- printf("[3] Mostrar carrinho\n");
-
- printf("Escolha uma opção:");
-
- scanf("%d", &opcao);
-
- 
-
- if (opcao < 1 || opcao > 3) {
-
- printf("Opção inválida! Tente novamente.\n");
-
- continue; // Voltar para o início do loop
-
- }
-
- 
-
- // Solicitar a quantidade para a fruta escolhida
-
- 
-
- if (opcao == 1) {
-
- printf("[1] Banana: ");
-
- printf("[2] Maça: ");
-
- printf("[3] Melão ");
- 
- printf("[4] Caqui ");
- 
- printf("[5] Menu ");
- 
- scanf("%d", &escolha);
- }
- 
- if (opcao == 1) {
-
- printf("Digite a quantidade de ");
-
- printf("Banana: ");
-
- scanf("%d", &quantidade);
-
- quantidade_banana += quantidade;
-
- } 
- 
- else if (opcao == 2) {
-
- printf("Digite a quantidade de ");
-
- printf("Maça: ");
-
- scanf("%d", &quantidade);
-
- quantidade_maca += quantidade;
-
- } 
- 
- else if (opcao == 3) {
-
- printf("Digite a quantidade de ");
-
- printf("Melão: ");
-
- scanf("%d", &quantidade);
-
- quantidade_melao += quantidade;
-
- } 
- 
- else if (opcao == 4) {
-
- printf("Digite a quantidade de ");
-
- printf("Caqui: ");
-
- scanf("%d", &quantidade);
-
- quantidade_caqui += quantidade;
-
- } 
- 
-else if (opcao == 5) {
-continue;
- } 
- 
- // Calcular valor total
-
- valor_total = (quantidade_banana * preco_banana) +
-
- (quantidade_maca * preco_maca) +
-
- (quantidade_melao * preco_melao);
- 
- (quantidade_caqui * preco_caqui);
-
- // Exibir o resumo e valor total
-
- printf("\nResumo das escolhas:\n");
-
- printf("Bananas: %d (R$ %.2f)\n", quantidade_banana, quantidade_banana * preco_banana);
-
- printf("Maçãs: %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
-
- printf("Melões: %d (R$ %.2f)\n", quantidade_melao, quantidade_melao * preco_melao);
- 
- printf("Melões: %d (R$ %.2f)\n", quantidade_caqui, quantidade_melao * preco_caqui);
-
- printf("Valor total: R$ %.2f\n", valor_total);
-
- break; // Sair do loop
-
- }
-
-
-
- 
-
- //Carrinho
-
- if (opcao == 5){
-
- printf("\n[1] Retirar produtos do carrinho\n");
-
- printf("[2] Adicionar mais produtos\n");
-
- printf("[3] Sair\n");
-
- printf("Escolha uma opção: ");
-
- scanf("%d",&opcao2);
-
- }
-
- if (opcao2 == 3)
-
- continue;
-
- 
-
- 
-
- if (opcao2 == 1){
-
- printf("\nQual produto quer tirar do carinho\n");
-
- printf("[1] Banana = %d \n",quantidade_banana);
-
- printf("[2] Maçã = %d\n",quantidade_maca);
-
- printf("[3] Melão = %d\n",quantidade_melao);
-
- printf("[4] Sair\n");
-
- printf("Escolha uma opcao: ");
-
- scanf("%d",&opcao3);
-
- }
-
- 
-
- 
-
- 
-
- //Sistema para retirar do carrinho
-
- if (opcao3 == 1) {
-
- printf("Bananas: ");
-
- scanf("%d", &quantidade_retira);
-
- 
-
- if (quantidade_retira > quantidade_banana) {
-
- printf("\nQuantidade Inválida\n");
-
- }
-
- else {
-
- printf("Agora você tem: %d Bananas",quantidade_banana-quantidade_retira);
-
- quantidade_banana -= quantidade_retira;
-
- }
-
- } 
-
- else if (opcao3 == 2) {
-
- printf("Maçãs: ");
-
- scanf("%d", &quantidade_retira);
-
- 
-
- if (quantidade_retira > quantidade_maca) {
-
- printf("\nQuantidade Invalida\n");
-
- }
-
- else{
-
- printf("Agora você tem: %d Maças\n",quantidade_maca-quantidade_retira);
-
- quantidade_maca -= quantidade_retira;
-
- }
-
- } 
-
- else if (opcao3 == 3) {
-
- printf("Melões: ");
-
- scanf("%d", &quantidade_retira);
-
- 
-
- if (quantidade_retira > quantidade_melao) {
-
- printf("\nQuantidade Invalida\n");
-
- }
-
- else{
-
- printf("Agora você tem: %d Maças\n",quantidade_melao-quantidade_retira);
-
- quantidade_melao -= quantidade_retira;
-
- }
-
- }
-
-}
-
- 
-
- // Seleção da forma de pagemento.
-
- printf("\nEscolha a forma de pagamento:\n");
-
- 
-
- printf("[1] Pix\n[2] Debito \n[3] Credito ");
-
- printf("\nEscolha uma opção: ");
-
- scanf("%d",&escolha);
-
- if(escolha==1)
-
- printf("\nAguardando Pagamento...\n");
-
- 
-
- else if(escolha==2)
-
- printf("\nEnviando informacoes para a maquininha:\n");
-
- 
-
- else if(escolha==3)
-
- printf("\nEnviando informacoes para a maquininha:\n");
-
- 
-
- printf("\nPagamento Concluido.\n");
-
- 
-
- printf("\nObrigado, Volte Sempre\n");
-
- return 0;
-
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    int opcao = 0, opcao2 = 0, opcao3 = 0, quantidade = 0, quantidade_retira = 0, escolha = 0;
+    int quantidade_banana = 0, quantidade_maca = 0, quantidade_melao = 0, quantidade_caqui = 0;
+    float valor_total = 0.0;
+
+    const float preco_banana = 5.0;
+    const float preco_caqui = 5.0;
+    const float preco_maca = 10.0;
+    const float preco_melao = 10.0;
+
+    printf("Bem Vindo ao Main Hortifrut\n");
+    printf("Dê uma olhada em nossas frutas e hortalícias!\n\n");
+
+    while (1) {
+        printf("[1] Catálogo de produtos\n");
+        printf("[2] Mostrar carrinho\n");
+        printf("[3] Sair e mostrar resumo\n");
+        printf("[4] Finalizar compra\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        if (opcao < 1 || opcao > 4) {
+            printf("Opção inválida! Tente novamente.\n");
+            continue;
+        }
+
+        // Catálogo de Produtos
+        if (opcao == 1) {
+            printf("[1] Banana\n[2] Maçã\n[3] Melão\n[4] Caqui\n");
+            printf("Escolha uma fruta: ");
+            scanf("%d", &opcao3);
+
+            printf("Digite a quantidade: ");
+            scanf("%d", &quantidade);
+
+            // Validação de quantidade
+            if (quantidade <= 0) {
+                printf("Quantidade inválida!\n");
+                continue;
+            }
+
+            switch (opcao3) {
+                case 1:
+                    quantidade_banana += quantidade;
+                    break;
+                case 2:
+                    quantidade_maca += quantidade;
+                    break;
+                case 3:
+                    quantidade_melao += quantidade;
+                    break;
+                case 4:
+                    quantidade_caqui += quantidade;
+                    break;
+                default:
+                    printf("Opção de fruta inválida!\n");
+            }
+        }
+
+        // Mostrar Carrinho
+        else if (opcao == 2) {
+            while (1) {
+                printf("\nCarrinho:\n");
+                printf("Bananas: %d\n", quantidade_banana);
+                printf("Maçãs: %d\n", quantidade_maca);
+                printf("Melões: %d\n", quantidade_melao);
+                printf("Caquis: %d\n", quantidade_caqui);
+                
+                printf("\n[1] Retirar produtos do carrinho\n");
+                printf("[2] Voltar ao menu\n");
+                printf("[3] Sair\n");
+                printf("Escolha uma opção: ");
+                scanf("%d", &opcao2);
+
+                if (opcao2 == 2) break; // Voltar ao menu
+                if (opcao2 == 3) break; // Sair do programa
+
+                printf("\nQual produto quer tirar do carrinho?\n");
+                printf("[1] Banana = %d \n", quantidade_banana);
+                printf("[2] Maçã = %d\n", quantidade_maca);
+                printf("[3] Melão = %d\n", quantidade_melao);
+                printf("[4] Caqui = %d\n", quantidade_caqui);
+                printf("Escolha uma opção: ");
+                scanf("%d", &opcao3);
+
+                printf("Digite a quantidade para retirar: ");
+                scanf("%d", &quantidade_retira);
+
+                // Validação de quantidade para retirar
+                if (quantidade_retira <= 0) {
+                    printf("\nQuantidade inválida! Deve ser maior que zero.\n");
+                    continue;
+                }
+
+                switch (opcao3) {
+                    case 1:
+                        if (quantidade_retira > quantidade_banana) {
+                            printf("\nQuantidade inválida\n");
+                        } else {
+                            quantidade_banana -= quantidade_retira;
+                            printf("Agora você tem: %d Bananas\n", quantidade_banana);
+                        }
+                        break;
+                    case 2:
+                        if (quantidade_retira > quantidade_maca) {
+                            printf("\nQuantidade inválida\n");
+                        } else {
+                            quantidade_maca -= quantidade_retira;
+                            printf("Agora você tem: %d Maçãs\n", quantidade_maca);
+                        }
+                        break;
+                    case 3:
+                        if (quantidade_retira > quantidade_melao) {
+                            printf("\nQuantidade inválida\n");
+                        } else {
+                            quantidade_melao -= quantidade_retira;
+                            printf("Agora você tem: %d Melões\n", quantidade_melao);
+                        }
+                        break;
+                    case 4:
+                        if (quantidade_retira > quantidade_caqui) {
+                            printf("\nQuantidade inválida\n");
+                        } else {
+                            quantidade_caqui -= quantidade_retira;
+                            printf("Agora você tem: %d Caquis\n", quantidade_caqui);
+                        }
+                        break;
+                    default:
+                        printf("Opção inválida!\n");
+                }
+            }
+        }
+
+        // Fechamento do pedido
+        else if (opcao == 3) {
+            printf("\nResumo das escolhas:\n");
+            printf("Bananas: %d (R$ %.2f)\n", quantidade_banana, quantidade_banana * preco_banana);
+            printf("Maçãs: %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
+            printf("Melões: %d (R$ %.2f)\n", quantidade_melao, quantidade_melao * preco_melao);
+            printf("Caquis: %d (R$ %.2f)\n", quantidade_caqui, quantidade_caqui * preco_caqui);
+            valor_total = (quantidade_banana * preco_banana) + 
+                          (quantidade_maca * preco_maca) + 
+                          (quantidade_melao * preco_melao) + 
+                          (quantidade_caqui * preco_caqui);
+            printf("Valor total: R$ %.2f\n", valor_total);
+            continue;
+        }
+        
+          // Seleção da forma de pagamento.
+        else if(opcao = 4){
+    		printf("\nEscolha a forma de pagamento:\n");
+    		printf("[1] Pix\n[2] Débito\n[3] Crédito\n");
+   			printf("Escolha uma opção: ");
+    		scanf("%d", &escolha);
+		}
+		if (escolha == 1) {
+       		printf("\nAguardando Pagamento...\n");
+       		printf("\nPagamento Concluído.\n");
+    		printf("\nObrigado, Volte Sempre.\n");
+        	break;
+    	} 
+		else if (escolha == 2 || escolha == 3) {
+        	printf("\nEnviando informações para a maquininha:\n");
+        	printf("\nPagamento Concluído.\n");
+    		printf("\nObrigado, Volte Sempre\n");
+        	break;
+    	} 
+		else {
+        	printf("\nOpção de pagamento inválida.\n");
+        	break;
+    	}
+
+    	
+    	return 0;
+	}
 }
