@@ -17,9 +17,9 @@ int main() {
     printf("Dê uma olhada em nossas frutas e hortalícias!\n\n");
 
     while (1) {
-        printf("[1] Catálogo de produtos\n");
+        printf("\n[1] Catálogo de produtos\n");
         printf("[2] Mostrar carrinho\n");
-        printf("[3] Sair e mostrar resumo\n");
+        printf("[3] Mostrar resumo\n");
         printf("[4] Finalizar compra\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
@@ -31,7 +31,7 @@ int main() {
 
         // Catálogo de Produtos
         if (opcao == 1) {
-            printf("[1] Banana\n[2] Maçã\n[3] Melão\n[4] Caqui\n");
+            printf("\n[1] Banana\n[2] Maçã\n[3] Melão\n[4] Caqui\n");
             printf("Escolha uma fruta: ");
             scanf("%d", &opcao3);
 
@@ -47,16 +47,16 @@ int main() {
             switch (opcao3) {
                 case 1:
                     quantidade_banana += quantidade;
-                    break;
+                    continue;
                 case 2:
                     quantidade_maca += quantidade;
-                    break;
+                    continue;
                 case 3:
                     quantidade_melao += quantidade;
-                    break;
+                    continue;
                 case 4:
                     quantidade_caqui += quantidade;
-                    break;
+                    continue;
                 default:
                     printf("Opção de fruta inválida!\n");
             }
@@ -77,8 +77,12 @@ int main() {
                 printf("Escolha uma opção: ");
                 scanf("%d", &opcao2);
 
-                if (opcao2 == 2) break; // Voltar ao menu
-                if (opcao2 == 3) break; // Sair do programa
+                if (opcao2 == 2){
+					break;
+				} // Voltar ao menu
+                if (opcao2 == 3){
+					break;
+				} // Sair do programa
 
                 printf("\nQual produto quer tirar do carrinho?\n");
                 printf("[1] Banana = %d \n", quantidade_banana);
@@ -157,7 +161,7 @@ int main() {
     		printf("[1] Pix\n[2] Débito\n[3] Crédito\n");
    			printf("Escolha uma opção: ");
     		scanf("%d", &escolha);
-		}
+		
 		if (escolha == 1) {
        		printf("\nAguardando Pagamento...\n");
        		printf("\nPagamento Concluído.\n");
@@ -177,5 +181,6 @@ int main() {
 
     	
     	return 0;
+		}
 	}
 }
