@@ -14,10 +14,10 @@ int main() {
     const float preco_melao = 10.0;
 
     printf("        Bem Vindo ao Main Hortifrut\n");
-    printf("Dê uma olhada em nossas frutas e hortalícias!\n\n");
+    printf("Dê uma olhada em nossas frutas e hortalícias!\n");
 
     while (1) {
-    	printf("----- Menu -----");
+    	printf("\n----- Menu -----");
         printf("\n[1] Catálogo de produtos\n");
         printf("[2] Mostrar carrinho\n");
         printf("[3] Mostrar resumo\n");
@@ -33,7 +33,7 @@ int main() {
         // Catálogo de Produtos
         if (opcao == 1) {
         	while(1){
-        	printf("\n ----- Catálogo de Produtos -----");
+        	printf("\n----- Catálogo de Produtos -----");
             printf("\n[1] Banana");
             printf("\n[2] Maçã");
             printf("\n[3] Melão");
@@ -55,7 +55,7 @@ int main() {
 
             // Validação de quantidade
            	if (quantidade <= 0) {
-                printf("Quantidade inválida!\n");
+                printf("Quantidade inválida!  A quantidade deve ser maior que zero\n");
                 continue;
             }
 
@@ -65,8 +65,8 @@ int main() {
                     continue;
                 case 2:
                     quantidade_maca += quantidade;
-                    continue;
-                case 3:
+    				continue;            
+				case 3:
                     quantidade_melao += quantidade;
                     continue;
                 case 4:
@@ -89,16 +89,12 @@ int main() {
                 
                 printf("\n[1] Retirar produtos do carrinho\n");
                 printf("[2] Voltar ao menu\n");
-                printf("[3] Sair\n");
                 printf("Escolha uma opção: ");
                 scanf("%d", &opcao2);
 
                 if (opcao2 == 2){
 					break;
 				} // Voltar ao menu
-                if (opcao2 == 3){
-					break;
-				} // Sair do programa
 
                 printf("\nQual produto quer tirar do carrinho?\n");
                 printf("[1] Banana = %d \n", quantidade_banana);
@@ -123,6 +119,7 @@ int main() {
                             printf("\nQuantidade inválida\n");
                         } else {
                             quantidade_banana -= quantidade_retira;
+                            printf("Produto retirado com sucesso!\n");
                             printf("Agora você tem: %d Bananas\n", quantidade_banana);
                         }
                         break;
@@ -131,6 +128,7 @@ int main() {
                             printf("\nQuantidade inválida\n");
                         } else {
                             quantidade_maca -= quantidade_retira;
+                            printf("Produto retirado com sucesso!\n");
                             printf("Agora você tem: %d Maçãs\n", quantidade_maca);
                         }
                         break;
@@ -139,6 +137,7 @@ int main() {
                             printf("\nQuantidade inválida\n");
                         } else {
                             quantidade_melao -= quantidade_retira;
+                            printf("Produto retirado com sucesso!\n");
                             printf("Agora você tem: %d Melões\n", quantidade_melao);
                         }
                         break;
@@ -147,6 +146,7 @@ int main() {
                             printf("\nQuantidade inválida\n");
                         } else {
                             quantidade_caqui -= quantidade_retira;
+                            printf("Produto retirado com sucesso!\n");
                             printf("Agora você tem: %d Caquis\n", quantidade_caqui);
                         }
                         break;
@@ -172,7 +172,7 @@ int main() {
         }
         
           // Seleção da forma de pagamento.
-        else if(opcao = 4){
+        else if(opcao == 4){
         	printf("\n----- Pagamento ------");
     		printf("\nEscolha a forma de pagamento:\n");
     		printf("[1] Pix\n[2] Débito\n[3] Crédito\n");
@@ -186,7 +186,7 @@ int main() {
         	break;
     	} 
 		else if (escolha == 2 || escolha == 3) {
-        	printf("\nEnviando informações para a maquininha:\n");
+        	printf("\nEnviando informações para a maquininha...\n");
         	printf("\nPagamento Concluído.\n");
     		printf("\nObrigado, Volte Sempre\n");
         	break;
