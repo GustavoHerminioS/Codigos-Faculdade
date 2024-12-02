@@ -26,6 +26,7 @@ int main(){
 
  // Tela inicial do menu
  while (1) {
+ 	printf("----- Menu -----");
 	printf("\n[1] Gerenciar Produtos\n");
  	printf("[2] Gerenciar Fornecedores\n");
  	printf("[3] Finalizar\n"); 
@@ -42,6 +43,7 @@ int main(){
 // Gerenciador de produtos
   if (opcao == 1) {
   	while(1){
+  	printf("\n----- Gerenciador de Produtos -----");
  	printf("\n[1] Cadastrar Produtos\n");
  	printf("[2] Listar Produtos\n");
  	printf("[3] Voltar ao menu\n");
@@ -51,12 +53,17 @@ int main(){
 
  if (opcao2 == 1){		
  	if (contProdutos < LIMITE_PRODUTOS) {
-    	printf("\nDigite o código do produto: ");
-    	scanf("%d", &codProdutos[contProdutos]); // Lê o código
+        // Gerar código automaticamente
+        int codigoProduto = contProdutos + 1; 
+        printf("\nCódigo do produto (automático): %d\n", codigoProduto);
         printf("Digite o nome do produto: ");
         scanf(" %[^\n]", nomesProdutos[contProdutos]); // Lê o nome
         printf("Digite o preço do produto: ");
         scanf("%f", &precosProdutos[contProdutos]); // Lê o preço
+        
+        // Atribuindo o código ao produto
+        codProdutos[contProdutos] = codigoProduto;
+        printf("Produto cadastrado com sucesso!\n");
         contProdutos++;
     }
  	else{
@@ -65,9 +72,10 @@ int main(){
  }
 
  else if (opcao2 == 2){
- 	printf("\nProdutos Cadastrados\n");
+ 	printf("\n");
+ 		printf("----- Produtos cadastrados -----\n");
  		for(int i=0; i < contProdutos; i++){
- 			printf("Código: %d, Produto: %s, Preço: %.2f\n", codProdutos[i], nomesProdutos[i], precosProdutos[i]);
+ 			printf("\nCódigo: %d | Produto: %s | Preço: %.2f\n", codProdutos[i], nomesProdutos[i], precosProdutos[i]);
 		 }
  }
  
@@ -83,6 +91,7 @@ int main(){
 // Tela Gerenciador de Fornecedores
  else if (opcao == 2){
  	while(1){
+ 	printf("\n----- Gerenciador de Fornecedores -----");
  	printf("\n[1] Cadastrar Fornecedor\n");
  	printf("[2] Listar Fornecedores\n");
  	printf("[3] Voltar ao menu\n");
@@ -92,7 +101,7 @@ int main(){
  
  if (opcao3 == 1){
  	if(contFornecedores < LIMITE_FORNECEDORES){
- 		printf("Digite o nome do fornecedor: ");
+ 		printf("\nDigite o nome do fornecedor: ");
  		scanf(" %[^\n]", nomesFornecedores[contFornecedores]);
  		printf("Digite o contato do fornecedor: ");
  		scanf(" %[^\n]", contatosFornecedores[contFornecedores]);
@@ -100,6 +109,7 @@ int main(){
  		scanf(" %[^\n]", cnpjsFornecedores[contFornecedores]);
  		printf("Digite o e-mail do fornecedor: ");
  		scanf(" %[^\n]", emailsFornecedores[contFornecedores]);
+ 		printf("Fornecedor cadastrado com sucesso!\n");
  		contFornecedores++;
 	 }
 	 else 	{
@@ -108,9 +118,9 @@ int main(){
  }
 
  else if (opcao3 == 2){
-	printf("\nFornecedores Cadastrados\n");
+	printf("\n----- Fornecedores Cadastrados -----\n");
  		for (int i=0; i < contFornecedores; i++){
- 			printf("Fornecedor: %s, Contato: %s, CNPJ: %s, E-mail: %s\n", nomesFornecedores[i], contatosFornecedores[i],cnpjsFornecedores[i], emailsFornecedores[i]);
+ 			printf("\nFornecedor: %s | Contato: %s | CNPJ: %s | E-mail: %s\n", nomesFornecedores[i], contatosFornecedores[i],cnpjsFornecedores[i], emailsFornecedores[i]);
 		 }
  }
  
@@ -125,10 +135,11 @@ int main(){
  
 // Finalizar programa
  if (opcao == 3) {
+ 	 printf("\nPrograma finalizado.\n");
  break;
  } 
 }
- printf("Programa finalizado.\n");
+
  return 0;
 	
 }
