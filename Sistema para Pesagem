@@ -68,9 +68,9 @@ int main() {
             if (escolha == 1) {
                 printf("\nGerando etiqueta...\n");
                 printf("Etiqueta gerada...\n");
-                break;  // Sai do loop de geração de etiqueta e volta ao menu principal
+                break; 
             } else if (escolha == 2) {
-                break;  // Sai do loop de geração de etiqueta e volta à seleção de produtos
+                break; 
             }
         }
 
