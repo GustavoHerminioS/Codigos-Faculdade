@@ -7,11 +7,13 @@ int main() {
     float preco_banana = 4.20; // Exemplo: R$ 4,20 por kg de banana
     float preco_laranja = 5.30; // Exemplo: R$ 5,30 por kg de laranja
 
-    int opcao;
+    int opcao,escolha;
     float peso, valor_total;
 
     // Exibe o menu de opções
-    printf("Seja bem-vindo ao sistema de Hortifruti!\n");
+    printf("Seja bem-vindo ao sistema de Pesagem \n");
+    printf(" Main Hortifruti!\n\n");
+    
     printf("Escolha o produto:\n");
     printf("[1] Maçã (R$ 6.50 por kg)\n");
     printf("[2] Banana (R$ 4.20 por kg)\n");
@@ -28,14 +30,47 @@ int main() {
         case 1:
             valor_total = peso * preco_maca;
             printf("O valor total da maçã é: R$ %.2f\n", valor_total);
+            printf("\nGerar etiqueta do pruduto ?");
+            	printf("\n[1] Sim\n[2] Não");
+            	printf("\nEscolha uma opção:");
+				scanf("%d", &escolha);
+					if (escolha == 1){
+						printf("\nGerando etiqueta...");
+						printf("\nEtiqueta gerada...");
+						break;
+					}
+					else
+						break;
             break;
         case 2:
             valor_total = peso * preco_banana;
             printf("O valor total da banana é: R$ %.2f\n", valor_total);
+            printf("\nGerar etiqueta do pruduto ?");
+            	printf("\n[1] Sim\n[2] Não");
+            	printf("\nEscolha uma opção:");
+				scanf("%d", &escolha);
+					if (escolha == 1){
+						printf("\nGerando etiqueta...");
+						printf("\nEtiqueta gerada...");
+						break;
+					}
+					else
+						break;
             break;
         case 3:
             valor_total = peso * preco_laranja;
             printf("O valor total da laranja é: R$ %.2f\n", valor_total);
+            printf("\nGerar etiqueta do pruduto ?");
+            	printf("\n[1] Sim\n[2] Não");
+            	printf("\nEscolha uma opção:");
+				scanf("%d", &escolha);
+					if (escolha == 1){
+						printf("\nGerando etiqueta...");
+						printf("\nEtiqueta gerada...");
+						break;
+					}
+					else
+						break;
             break;
         default:
             printf("Opção inválida! Por favor, escolha um produto válido.\n");
