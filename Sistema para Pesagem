@@ -1,80 +1,85 @@
 #include <stdio.h>
 #include <locale.h>
+
 int main() {
-	setlocale(LC_ALL,"Portuguese");
-    // Preço por kg para diferentes produtos
+    setlocale(LC_ALL, "Portuguese");
+
     float preco_maca = 6.50;  // Exemplo: R$ 6,50 por kg de maçã
     float preco_banana = 4.20; // Exemplo: R$ 4,20 por kg de banana
     float preco_laranja = 5.30; // Exemplo: R$ 5,30 por kg de laranja
 
-    int opcao,escolha;
+    int opcao, escolha;
     float peso, valor_total;
 
-    // Exibe o menu de opções
-    printf("Seja bem-vindo ao sistema de Pesagem \n");
-    printf(" Main Hortifruti!\n\n");
-    
-    printf("Escolha o produto:\n");
-    printf("[1] Maçã (R$ 6.50 por kg)\n");
-    printf("[2] Banana (R$ 4.20 por kg)\n");
-    printf("[3] Laranja (R$ 5.30 por kg)\n");
-    printf("Digite o número do produto escolhido: ");
-    scanf("%d", &opcao);
+    printf("----- Seja bem-vindo ao Sistema de Pesagem -----\n");
 
-    // Solicita o peso do produto escolhido
-    printf("Digite o peso do produto em kg: ");
-    scanf("%f", &peso);
+    while (1) { 
+        // Exibe o menu de opções
+        printf("\nEscolha o produto:\n");
+        printf("[1] Maçã (R$ 6.50 por kg)\n");
+        printf("[2] Banana (R$ 4.20 por kg)\n");
+        printf("[3] Laranja (R$ 5.30 por kg)\n");
+        printf("Digite o número do produto escolhido: ");
+        scanf("%d", &opcao);
 
-    // Faz o calculo PESO X PREÇO
-    switch (opcao) {
-        case 1:
-            valor_total = peso * preco_maca;
-            printf("O valor total da maçã é: R$ %.2f\n", valor_total);
-            printf("\nGerar etiqueta do pruduto ?");
-            	printf("\n[1] Sim\n[2] Não");
-            	printf("\nEscolha uma opção:");
-				scanf("%d", &escolha);
-					if (escolha == 1){
-						printf("\nGerando etiqueta...");
-						printf("\nEtiqueta gerada...");
-						break;
-					}
-					else
-						break;
-            break;
-        case 2:
-            valor_total = peso * preco_banana;
-            printf("O valor total da banana é: R$ %.2f\n", valor_total);
-            printf("\nGerar etiqueta do pruduto ?");
-            	printf("\n[1] Sim\n[2] Não");
-            	printf("\nEscolha uma opção:");
-				scanf("%d", &escolha);
-					if (escolha == 1){
-						printf("\nGerando etiqueta...");
-						printf("\nEtiqueta gerada...");
-						break;
-					}
-					else
-						break;
-            break;
-        case 3:
-            valor_total = peso * preco_laranja;
-            printf("O valor total da laranja é: R$ %.2f\n", valor_total);
-            printf("\nGerar etiqueta do pruduto ?");
-            	printf("\n[1] Sim\n[2] Não");
-            	printf("\nEscolha uma opção:");
-				scanf("%d", &escolha);
-					if (escolha == 1){
-						printf("\nGerando etiqueta...");
-						printf("\nEtiqueta gerada...");
-						break;
-					}
-					else
-						break;
-            break;
-        default:
-            printf("Opção inválida! Por favor, escolha um produto válido.\n");
-            break;
+        if (opcao < 1 || opcao > 3) {
+            printf("Opção inválida! Tente novamente.\n");
+            continue;
+        }
+
+        // Solicita o peso do produto escolhido
+        printf("Digite o peso do produto em kg: ");
+        scanf("%f", &peso);
+
+        while (peso <= 0) {
+            printf("\nErro! O peso deve ser um valor positivo. Digite novamente: ");
+            scanf("%f", &peso);  // Lê novamente o peso
+        }
+
+        // Faz o cálculo PESO X PREÇO
+        switch (opcao) {
+            case 1:
+                valor_total = peso * preco_maca;
+                printf("O valor total da maçã é: R$ %.2f\n", valor_total);
+                break;
+            case 2:
+                valor_total = peso * preco_banana;
+                printf("O valor total da banana é: R$ %.2f\n", valor_total);
+                break;
+            case 3:
+                valor_total = peso * preco_laranja;
+                printf("O valor total da laranja é: R$ %.2f\n", valor_total);
+                break;
+        }
+
+        while (1) {
+            // Pergunta se o usuário deseja gerar a etiqueta
+            printf("\nGerar etiqueta do produto?\n");
+            printf("[1] Sim\n[2] Não\n");
+            printf("Escolha uma opção: ");
+            scanf("%d", &escolha);
+
+            // Validação das escolhas
+            if (escolha < 1 || escolha > 2) {
+                printf("Opção inválida! Tente novamente.\n");
+                continue;  
+            }
+
+            if (escolha == 1) {
+                printf("\nGerando etiqueta...\n");
+                printf("Etiqueta gerada...\n");
+                break;  // Sai do loop de geração de etiqueta e volta ao menu principal
+            } else if (escolha == 2) {
+                break;  // Sai do loop de geração de etiqueta e volta à seleção de produtos
+            }
+        }
+
+       
+        if (escolha == 2) {
+            continue;  // Volta para a tela de seleção de produtos
+        }
+       
+        break;
     }
 
     return 0;
