@@ -5,13 +5,13 @@ int main() {
     setlocale(LC_ALL, "Portuguese");
 
     int opcao = 0, opcao2 = 0, opcao3 = 0, quantidade = 0, quantidade_retira = 0, escolha = 0;
-    int quantidade_banana = 0, quantidade_maca = 0, quantidade_melao = 0, quantidade_caqui = 0;
+    int quantidade_banana = 0, quantidade_maca = 0, quantidade_tomate = 0, quantidade_alface = 0;
     float valor_total = 0.0;
 
     const float preco_banana = 5.0;
-    const float preco_caqui = 5.0;
     const float preco_maca = 10.0;
-    const float preco_melao = 10.0;
+    const float preco_alface = 5.0;
+    const float preco_tomate = 10.0;
 
     printf("        Bem Vindo ao Main Hortifrut\n");
     printf("Dê uma olhada em nossas frutas e hortalícias!\n");
@@ -36,10 +36,10 @@ int main() {
         	printf("\n----- Catálogo de Produtos -----");
             printf("\n[1] Banana");
             printf("\n[2] Maçã");
-            printf("\n[3] Melão");
-            printf("\n[4] Caqui");
+            printf("\n[3] Tomate");
+            printf("\n[4] Alface");
             printf("\n[5] Menu");
-            printf("\nEscolha uma fruta: ");
+            printf("\nEscolha uma opção: ");
             scanf("%d", &opcao3);
             
             if (opcao3 < 1 || opcao3 > 5) {
@@ -52,6 +52,7 @@ int main() {
 			}
             printf("Digite a quantidade: ");
             scanf("%d", &quantidade);
+            printf("\nProduto adicionado com sucesso!\n");
 
             // Validação de quantidade
            	if (quantidade <= 0) {
@@ -67,10 +68,10 @@ int main() {
                     quantidade_maca += quantidade;
     				continue;            
 				case 3:
-                    quantidade_melao += quantidade;
+                    quantidade_tomate += quantidade;
                     continue;
                 case 4:
-                    quantidade_caqui += quantidade;
+                    quantidade_alface += quantidade;
                     continue;
                 default:
                     printf("Opção de fruta inválida!\n");
@@ -82,10 +83,10 @@ int main() {
         else if (opcao == 2) {
             while (1) {
                 printf("\n----- Carrinho -----\n");
-                printf("Bananas: %d\n", quantidade_banana);
-                printf("Maçãs: %d\n", quantidade_maca);
-                printf("Melões: %d\n", quantidade_melao);
-                printf("Caquis: %d\n", quantidade_caqui);
+                printf("Banana(s): %d\n", quantidade_banana);
+                printf("Maçã(s): %d\n", quantidade_maca);
+                printf("Tomate(s): %d\n", quantidade_tomate);
+                printf("Alface(s): %d\n", quantidade_alface);
                 
                 printf("\n[1] Retirar produtos do carrinho\n");
                 printf("[2] Voltar ao menu\n");
@@ -97,10 +98,10 @@ int main() {
 				} // Voltar ao menu
 
                 printf("\nQual produto quer tirar do carrinho?\n");
-                printf("[1] Banana = %d \n", quantidade_banana);
-                printf("[2] Maçã = %d\n", quantidade_maca);
-                printf("[3] Melão = %d\n", quantidade_melao);
-                printf("[4] Caqui = %d\n", quantidade_caqui);
+                printf("[1] Banana(s) = %d \n", quantidade_banana);
+                printf("[2] Maçã(s) = %d\n", quantidade_maca);
+                printf("[3] Tomate(s) = %d\n", quantidade_tomate);
+                printf("[4] Caqui(s) = %d\n", quantidade_alface);
                 printf("Escolha uma opção: ");
                 scanf("%d", &opcao3);
 
@@ -120,7 +121,7 @@ int main() {
                         } else {
                             quantidade_banana -= quantidade_retira;
                             printf("Produto retirado com sucesso!\n");
-                            printf("Agora você tem: %d Bananas\n", quantidade_banana);
+                            printf("Agora você tem: %d Banana(s)\n", quantidade_banana);
                         }
                         break;
                     case 2:
@@ -129,25 +130,25 @@ int main() {
                         } else {
                             quantidade_maca -= quantidade_retira;
                             printf("Produto retirado com sucesso!\n");
-                            printf("Agora você tem: %d Maçãs\n", quantidade_maca);
+                            printf("Agora você tem: %d Maçã(s)\n", quantidade_maca);
                         }
                         break;
                     case 3:
-                        if (quantidade_retira > quantidade_melao) {
+                        if (quantidade_retira > quantidade_tomate) {
                             printf("\nQuantidade inválida\n");
                         } else {
-                            quantidade_melao -= quantidade_retira;
+                            quantidade_tomate -= quantidade_retira;
                             printf("Produto retirado com sucesso!\n");
-                            printf("Agora você tem: %d Melões\n", quantidade_melao);
+                            printf("Agora você tem: %d Tomate(s)\n", quantidade_tomate);
                         }
                         break;
                     case 4:
-                        if (quantidade_retira > quantidade_caqui) {
+                        if (quantidade_retira > quantidade_alface) {
                             printf("\nQuantidade inválida\n");
                         } else {
-                            quantidade_caqui -= quantidade_retira;
+                            quantidade_alface -= quantidade_retira;
                             printf("Produto retirado com sucesso!\n");
-                            printf("Agora você tem: %d Caquis\n", quantidade_caqui);
+                            printf("Agora você tem: %d Alface(s)\n", quantidade_alface);
                         }
                         break;
                     default:
@@ -159,14 +160,14 @@ int main() {
         // Fechamento do pedido
         else if (opcao == 3) {
             printf("\n----- Resumo das escolhas -----\n");
-            printf("Bananas: %d (R$ %.2f)\n", quantidade_banana, quantidade_banana * preco_banana);
-            printf("Maçãs: %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
-            printf("Melões: %d (R$ %.2f)\n", quantidade_melao, quantidade_melao * preco_melao);
-            printf("Caquis: %d (R$ %.2f)\n", quantidade_caqui, quantidade_caqui * preco_caqui);
+            printf("Banana(s): %d (R$ %.2f)\n", quantidade_banana, quantidade_banana * preco_banana);
+            printf("Maçã(s): %d (R$ %.2f)\n", quantidade_maca, quantidade_maca * preco_maca);
+            printf("Tomate(s): %d (R$ %.2f)\n", quantidade_tomate, quantidade_tomate * preco_tomate);
+            printf("Caqui(s): %d (R$ %.2f)\n", quantidade_alface, quantidade_alface * preco_alface);
             valor_total = (quantidade_banana * preco_banana) + 
                           (quantidade_maca * preco_maca) + 
-                          (quantidade_melao * preco_melao) + 
-                          (quantidade_caqui * preco_caqui);
+                          (quantidade_tomate * preco_tomate) + 
+                          (quantidade_alface * preco_alface);
             printf("Valor total: R$ %.2f\n", valor_total);
             continue;
         }
@@ -175,7 +176,7 @@ int main() {
         else if(opcao == 4){
         	printf("\n----- Pagamento ------");
     		printf("\nEscolha a forma de pagamento:\n");
-    		printf("[1] Pix\n[2] Débito\n[3] Crédito\n");
+    		printf("[1] Pix\n[2] Débito\n[3] Crédito\n[4] Voucher\n");
    			printf("Escolha uma opção: ");
     		scanf("%d", &escolha);
 		
@@ -191,6 +192,12 @@ int main() {
     		printf("\nObrigado, Volte Sempre\n");
         	break;
     	} 
+    	else if (escolha == 4) {
+        	printf("\nEnviando informações para a maquininha...\n");
+        	printf("\nPagamento Concluído.\n");
+    		printf("\nObrigado, Volte Sempre.\n");
+        	break;
+    }
 		else {
         	printf("\nOpção de pagamento inválida.\n");
         	break;
