@@ -1,0 +1,126 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace L01_EX01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region 
+            // Leia um numero inteiro e exiba seu dobro
+            // Console.Write("Digite um número: ");
+            // int numero = int.Parse(Console.ReadLine());
+            // int dobro = numero * 2;
+            // Console.WriteLine($"O dobro é {dobro}");
+            #endregion
+            #region
+            // Leia dois números do tipo float e mostre a média entre eles.
+            // Console.Write("Digite o primeiro número: ");
+            // float numero1 = float.Parse(Console.ReadLine());
+            // Console.Write("Digite o segundo número: ");
+            // float numero2 = float.Parse(Console.ReadLine());
+            // float media = numero1 + numero2 / 2;
+            // Console.Write($"A média é {media} ");
+            #endregion
+            #region
+            //Leia um número inteiro e informe se ele é positivo, negativo ou zero.
+            //Console.Write("Digite um número: ");
+            //int n1 = int.Parse(Console.ReadLine());
+            //if (n1 > 0)
+            //{
+            //Console.WriteLine("Esse número é positivo");
+            //}
+            //else if (n1 < 0)
+            //{
+            //Console.WriteLine("Esse número é negativo");
+            //}
+            //else
+            //{
+            //Console.WriteLine("Esse número é igual a zero");
+            //}
+            #endregion
+            #region
+            //Peça a idade de uma pessoa e informe se ela pode votar (idade mínima: 16 anos).
+            //Console.Write("Digite sua idade: ");
+            //int idade = int.Parse(Console.ReadLine());
+            //if (idade >= 16) 
+            //{
+            //Console.WriteLine("Você já pode votar!");
+            //}
+            //else
+            //{
+            //Console.WriteLine("Você não pode votar");
+            //}
+            #endregion
+            #region
+            //Imprima na tela os números de 1 a 10 utilizando o laço `for`.
+            //List<int> numeros = new List<int> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //foreach (int x in numeros )
+            //{
+            //Console.WriteLine(x);
+            //}
+
+            //for (int i = 0; i < 11; i++)
+            //{
+            //Console.WriteLine(i);
+            //}
+            #endregion
+            #region
+            // Peça um número inteiro positivo e exiba sua tabuada de multiplicação de 1 a 10.
+            //Console.Write("Digite um número e descubra sua tabuada: ");
+            //int tabuada = int.Parse(Console.ReadLine());
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    int resultado = tabuada * i;
+            //    Console.Write($"{tabuada} x {i} = {resultado}\n");
+            //}
+            #endregion
+            #region
+            // Solicite um número e imprima todos os números pares de 0 até esse número.
+            //Console.Write("Digite um número: ");
+            //int n1 = int.Parse(Console.ReadLine());
+            // for (int i = 0; i <= n1; i++)
+            //  {
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            // }
+            #endregion
+            #region
+            // Peça ao usuário um número de 1 a 7 e exiba o nome do dia da semana correspondente.
+            //Console.Write("Digite um número de 1 a 7 e descubra o dia da semana: ");
+            //int dia = int.Parse(Console.ReadLine());
+            // switch (dia)
+            // {
+            //      case 1:
+            //Console.WriteLine("Segunda-feira");
+            //break;
+            //        case 2:
+            // Console.WriteLine("Terça-feira");
+            //break;
+            //       case 3:
+            //Console.WriteLine("Quarta-feira");
+            //break;
+            //        case 4:
+            //Console.WriteLine("Quinta-feira");
+            //break;
+            //        case 5:
+            //Console.WriteLine("Sexta-feira");
+            //break;
+            //        case 6:
+            //Console.WriteLine("Sabádo");
+            //break;
+            //        case 7:
+            //Console.WriteLine("Domingo");
+            //break;
+            //}
+            //#endregion
+
+        }
+    }
+}
