@@ -93,32 +93,40 @@ namespace L01_EX01
             #endregion
             #region
             // Peça ao usuário um número de 1 a 7 e exiba o nome do dia da semana correspondente.
+            // Peça ao usuário um número de 1 a 7 e exiba o nome do dia da semana correspondente.
             //Console.Write("Digite um número de 1 a 7 e descubra o dia da semana: ");
-            //int dia = int.Parse(Console.ReadLine());
-            // switch (dia)
-            // {
-            //      case 1:
-            //Console.WriteLine("Segunda-feira");
-            //break;
-            //        case 2:
-            // Console.WriteLine("Terça-feira");
-            //break;
-            //       case 3:
-            //Console.WriteLine("Quarta-feira");
-            //break;
-            //        case 4:
-            //Console.WriteLine("Quinta-feira");
-            //break;
-            //        case 5:
-            //Console.WriteLine("Sexta-feira");
-            //break;
-            //        case 6:
-            //Console.WriteLine("Sabádo");
-            //break;
-            //        case 7:
-            //Console.WriteLine("Domingo");
-            //break;
-            //}
+            // int dia = int.Parse(Console.ReadLine());
+            //   if (dia < 7 && dia > 1)
+            //  {
+            //  switch (dia)
+            //      {
+            //           case 1:
+            //              Console.WriteLine("Segunda-feira");
+            //   break;
+            //           case 2:
+            //    Console.WriteLine("Terça-feira");
+            //               break;
+            //          case 3:
+            //              Console.WriteLine("Quarta-feira");
+            //    break;
+            //            case 4:
+            //   Console.WriteLine("Quinta-feira");
+            //   break;
+            //          case 5:
+            // Console.WriteLine("Sexta-feira");
+            //              break;
+            //           case 6:
+            //   Console.WriteLine("Sabádo");
+            //   break;
+            //           case 7:
+            // Console.WriteLine("Domingo");
+            //   break;
+            //      }
+            //  }
+            //  else
+            //  {
+            //  Console.WriteLine("Valor inválido tente novamente");
+            //  }
             //#endregion
 
         }
