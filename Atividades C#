@@ -128,6 +128,17 @@ namespace L01_EX01
             //  Console.WriteLine("Valor inválido tente novamente");
             //  }
             //#endregion
+            #region
+            // Solicite uma senha ao usuário até que ele acerte a senha “admin123”
+            //string senha = "amominhafamilia";
+            //do
+            //{
+            //    Console.WriteLine("Digite a senha");
+            //    senha = Console.ReadLine();
+            //} while (senha != "amominhafamilia");
+            //
+            //Console.WriteLine("Parabêns você acertou a senha");
+            #endregion
 
         }
     }
