@@ -18,15 +18,13 @@ namespace L01_EX01
     {
         static void Main(string[] args)
         {
-            #region 
-            // Leia um numero inteiro e exiba seu dobro
+            #region Lista 1 - Dobro de um número
             // Console.Write("Digite um número: ");
             // int numero = int.Parse(Console.ReadLine());
             // int dobro = numero * 2;
             // Console.WriteLine($"O dobro é {dobro}");
             #endregion
-            #region
-            // Leia dois números do tipo float e mostre a média entre eles.
+            #region Lista 1 - Média entre dois números
             // Console.Write("Digite o primeiro número: ");
             // float numero1 = float.Parse(Console.ReadLine());
             // Console.Write("Digite o segundo número: ");
@@ -34,8 +32,7 @@ namespace L01_EX01
             // float media = numero1 + numero2 / 2;
             // Console.Write($"A média é {media} ");
             #endregion
-            #region
-            //Leia um número inteiro e informe se ele é positivo, negativo ou zero.
+            #region Lista 2 - Positivo, Negativo ou Zero
             //Console.Write("Digite um número: ");
             //int n1 = int.Parse(Console.ReadLine());
             //if (n1 > 0)
@@ -51,8 +48,7 @@ namespace L01_EX01
             //Console.WriteLine("Esse número é igual a zero");
             //}
             #endregion
-            #region
-            //Peça a idade de uma pessoa e informe se ela pode votar (idade mínima: 16 anos).
+            #region Lista 2 - Pode ou não votar
             //Console.Write("Digite sua idade: ");
             //int idade = int.Parse(Console.ReadLine());
             //if (idade >= 16) 
@@ -64,8 +60,7 @@ namespace L01_EX01
             //Console.WriteLine("Você não pode votar");
             //}
             #endregion
-            #region
-            //Imprima na tela os números de 1 a 10 utilizando o laço `for`.
+            #region Lista 3 - Números de 1 a 10
             //List<int> numeros = new List<int> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             //foreach (int x in numeros )
             //{
@@ -77,8 +72,7 @@ namespace L01_EX01
             //Console.WriteLine(i);
             //}
             #endregion
-            #region
-            // Peça um número inteiro positivo e exiba sua tabuada de multiplicação de 1 a 10.
+            #region Lista 3 - Tabuada
             //Console.Write("Digite um número e descubra sua tabuada: ");
             //int tabuada = int.Parse(Console.ReadLine());
             //for (int i = 1; i < 11; i++)
@@ -87,8 +81,7 @@ namespace L01_EX01
             //    Console.Write($"{tabuada} x {i} = {resultado}\n");
             //}
             #endregion
-            #region
-            // Solicite um número e imprima todos os números pares de 0 até esse número.
+            #region Lista 3 - Números Pares 
             //Console.Write("Digite um número: ");
             //int n1 = int.Parse(Console.ReadLine());
             // for (int i = 0; i <= n1; i++)
@@ -98,9 +91,18 @@ namespace L01_EX01
             //        Console.WriteLine(i);
             // }
             #endregion
-            #region
-            // Peça ao usuário um número de 1 a 7 e exiba o nome do dia da semana correspondente.
-            // Peça ao usuário um número de 1 a 7 e exiba o nome do dia da semana correspondente.
+            #region Lista 4 - Senhas iguais
+            // Solicite uma senha ao usuário até que ele acerte a senha “admin123”
+            //string senha = "amominhafamilia";
+            //do
+            //{
+            //    Console.WriteLine("Digite a senha");
+            //    senha = Console.ReadLine();
+            //} while (senha != "amominhafamilia");
+            //
+            //Console.WriteLine("Parabêns você acertou a senha");
+            #endregion
+            #region Lista 5 - Dias da semana
             //Console.Write("Digite um número de 1 a 7 e descubra o dia da semana: ");
             // int dia = int.Parse(Console.ReadLine());
             //   if (dia < 7 && dia > 1)
@@ -135,18 +137,6 @@ namespace L01_EX01
             //  Console.WriteLine("Valor inválido tente novamente");
             //  }
             //#endregion
-            #region
-            // Solicite uma senha ao usuário até que ele acerte a senha “admin123”
-            //string senha = "amominhafamilia";
-            //do
-            //{
-            //    Console.WriteLine("Digite a senha");
-            //    senha = Console.ReadLine();
-            //} while (senha != "amominhafamilia");
-            //
-            //Console.WriteLine("Parabêns você acertou a senha");
-            #endregion
-
         }
     }
 }
